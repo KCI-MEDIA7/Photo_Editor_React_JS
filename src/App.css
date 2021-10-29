@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  margin: 2rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.grid-container{
+  display: grid;
+  grid-template-areas:
+  'bright  image image contrast'
+  'saturate image image blur'
+  'grayscal image image hue-rotate'
+  '. slider slider .';
+  grid-template-rows: repeat(4, 25%);
+  grid-template-columns: 240px auto auto 240px;
+  height: 85vh;
+  width: 100%;
+  grid-gap: 1rem;
 }
-
-.App-link {
-  color: #61dafb;
+.image{
+  background-image: url("photo_nature.jpg") ;
+  border: 2px solid white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Brightness{
+  grid-area: bright;
+  filter: brightness(150%);
+}
+.Saturation{
+  grid-area: saturate;
+  filter: saturate(200%);
+}
+.Contrast{
+  grid-area: contrast;
+  filter: contrast(200%);
+}
+.Grayscale{
+  grid-area: grayscal;
+  filter: grayscale(100%);
+}
+.Blur{
+  grid-area: blur;
+  filter: blur(1px);
+}
+.Hue-Rotate{
+  grid-area:hue-rotate;
+  filter: hue-rotate(90deg);
+}
+.sepia{
+  grid-area: sepia;
+}
+.main-image{
+  grid-area: image;
+  background-image: url("photo_nature.jpg") ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slider{
+  grid-area:slider;
+}
+.image:hover{
+  border:2px solid salmon;
+}
+.image i{
+  position: absolute;
+  right: 5%;
+  top:5%;
+  color: darkgreen;
 }
