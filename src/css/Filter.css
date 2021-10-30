@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  body{
+    margin: 2rem;
+  }
+  .grid-container{
+    display: grid;
+    grid-template-areas:
+    'bright  image image contrast'
+    'saturate image image blur'
+    'grayscal image image hue-rotate'
+    '. slider slider .';
+    grid-template-rows: repeat(4, 25%);
+    grid-template-columns: 240px auto auto 240px;
+    height: 85vh;
+    width: 100%;
+    grid-gap: 1rem;
+    --stagger-delay: 1s;
+  }
+  .image{
+    background-image: url("../photo_nature.jpg") ;
+    border: 2px solid white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .Brightness{
+    grid-area: bright;
+    filter: brightness(150%);
+    animation-delay: calc(1 * var(--stagger-delay));
+  }
+  .Saturation{
+    grid-area: saturate;
+    filter: saturate(200%);
+    animation-delay: calc(3 * var(--stagger-delay));
+  }
+  .Contrast{
+    grid-area: contrast;
+    filter: contrast(200%);
+    animation-delay: calc(2 * var(--stagger-delay));
+  }
+  .Grayscale{
+    grid-area: grayscal;
+    filter: grayscale(100%);
+    animation-delay: calc(5 * var(--stagger-delay));
+  }
+  .Blur{
+    grid-area: blur;
+    filter: blur(1px);
+    animation-delay: calc(4 * var(--stagger-delay));
+  }
+  .Hue-Rotate{
+    grid-area:hue-rotate;
+    filter: hue-rotate(90deg);
+    animation-delay: calc(6 * var(--stagger-delay));
+  }
+  .sepia{
+    grid-area: sepia;
+  }
+  .main-image{
+    grid-area: image;
+    background-image: url("../photo_nature.jpg") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation-delay: calc(7 * var(--stagger-delay));
+    animation: cardEntrance 700ms ease-out;
+  }
+  .slider{
+    grid-area:slider;
+    animation-delay: calc(8 * var(--stagger-delay));
+  }
+  .image:hover{
+    border:3px solid salmon;
+  }
+  .image i{
+    position: absolute;
+    right: 5%;
+    top:5%;
+    color: darkgreen;
+  }
+  @keyframes cardEntrance {
+    from {
+      opacity: 0;
+      transform: scale(0.3);
+      filter: hue-rotate(180deg);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+      filter: hue-rotate(0deg);
+    }
+  }
+  
+  .image {
+    animation: cardEntrance 700ms ease-out;
+    animation-fill-mode: backwards;
+  }
+  
