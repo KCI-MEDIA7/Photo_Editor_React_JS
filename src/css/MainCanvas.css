@@ -1,3 +1,8 @@
+@import "FileDrop.css";
+:root{
+    --green : darkgreen;
+    --grey : #C0C0C0;
+}
 .main-container{
     display: grid;
     grid-template-areas: 
@@ -18,4 +23,13 @@
 }
 button{
     margin: 1rem 2rem;
+}
+.animated-border-button.success{
+    background-color: var(--green);
+}
+.animated-border-button::before.success{
+  border-top: 2px solid var(--green);
+}
+.animated-border-button::after.success{
+  border-bottom: 2px solid var(--green);
 }

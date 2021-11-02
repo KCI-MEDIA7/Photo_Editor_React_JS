@@ -1,3 +1,4 @@
+@import "FileDrop.css";
 .sug-grid{
     margin-top: 4.5rem;
 }
@@ -10,3 +11,4 @@
 .rec-image{
     max-width: 100%;
 }
+

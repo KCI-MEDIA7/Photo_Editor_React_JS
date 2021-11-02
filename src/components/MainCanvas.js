@@ -39,8 +39,8 @@ function MainCanvas({fileName , addingFilter , reset}) {
             <img src={fileName} alt="main-bg" ref={image_ref} style={{display:"none"}}/>
             <canvas ref={canvas_ref} className="main-image"></canvas><br/>
             <div className="button-container">
-                <button onClick={download}>Download</button>
-                <button onClick ={reset}>Reset</button>
+                <button onClick={download} class="animated-border-button success" >Download</button>
+                <button onClick ={reset} class="animated-border-button reset" >Reset</button>
             </div>
         </div>
     )

@@ -13,7 +13,6 @@ function FileDrop() {
         const content = e.target.result;
         //console.log('file content',  content)
         localStorage.setItem('image', JSON.stringify(content))
-        setFilename(true)
         //console.log(filename)
     }
     function handleChangeSubmit(file){
@@ -27,8 +26,9 @@ function FileDrop() {
                 filename?<Filter/>:
             <div className="filedrop">
                 <form onSubmit={ handleSubmit}>
+                    <label>Choose a file</label><br/>
                     <input type="file" id="file" onChange={(e)=>{handleChangeSubmit(e.target.files[0])}}/>                
-                    <button type="submit">submit</button>
+                    <button type="submit" class="animated-border-button" onClick={()=>{setFilename(true)}}>Submit</button>
                 </form>
             </div>
             }

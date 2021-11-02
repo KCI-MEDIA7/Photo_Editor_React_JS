@@ -31,7 +31,7 @@ function Canvas({fileName , values , name}) {
         <div className = "img-container">
             <img src={fileName} ref={image_ref} style={{display:"none"}} alt={name}/>
             <canvas ref={canvas_ref} className="rec-image"></canvas><br/>
-            <button  onClick={download}>Download</button>
+            <button  onClick={download} className="animated-border-button">Download</button>
         </div>
     )
 }
