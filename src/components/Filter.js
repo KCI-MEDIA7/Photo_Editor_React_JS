@@ -3,6 +3,7 @@ import Options from './Options';
 import Slider from './Slider';
 import "../css/Filter.css";
 import SuggFilter from './SuggFilter';
+import MainCanvas from './MainCanvas';
 
 const FILTER_OPTIONS = [
     {
@@ -101,14 +102,17 @@ function Filter() {
       })
       //console.log(filter_combination)
       let everyfilter = filter_combination.join(" ")
-    let style = {
+      let style = {
         filter:everyfilter,
-        backgroundImage:`url(${fileName})`
-    }
+        // backgroundImage:`url(${fileName})`
+      }
     return style
     }
 
-  
+    function resetFilter(){
+      setFilters(FILTER_OPTIONS)
+    }
+
     function handleChangeSlider({target}){
       setFilters(prevOptions => {
         return prevOptions.map((option, index) => {
@@ -122,7 +126,8 @@ function Filter() {
       <div>
         <h2 style={{textAlign:"center"}}>Beautify your images...</h2>
         <div className="grid-container">
-          <div className="main-image" style={stylingMainImage()} ></div>
+          {/* <div className="main-image" style={stylingMainImage()} ></div> */}
+          <MainCanvas fileName={fileName} addingFilter = {stylingMainImage()} reset = {resetFilter}/>
           {
             filters.map((filter , index)=>{
               return(

@@ -1,0 +1,21 @@
+.main-container{
+    display: grid;
+    grid-template-areas: 
+    'main-image main-image'
+    'button button' ;
+    grid-gap: 2rem;
+    place-items: center;
+}
+.main-image{
+    width: 85%;
+    grid-area: main-image;
+}
+.button-container{
+    grid-area: button;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+button{
+    margin: 1rem 2rem;
+}
