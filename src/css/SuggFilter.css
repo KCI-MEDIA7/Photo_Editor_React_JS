@@ -1,0 +1,12 @@
+.sug-grid{
+    margin-top: 4.5rem;
+}
+.image-grid{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-gap: 3rem;
+}
+
+.rec-image{
+    max-width: 100%;
+}

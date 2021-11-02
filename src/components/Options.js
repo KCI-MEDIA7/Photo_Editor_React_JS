@@ -7,6 +7,6 @@ function Options({name,active,handleChange ,style}) {
             {active ?<i className="fas fa-check-square"></i>:''}
         </div>
     )
-}
+} 
 
 export default Options

@@ -20,7 +20,7 @@ body {
     'bright  image image contrast'
     'saturate image image blur'
     'grayscal image image hue-rotate'
-    '. slider slider .';
+    'Invert slider slider Sepia';
     grid-template-rows: repeat(4, 25%);
     grid-template-columns: 240px auto auto 240px;
     height: 85vh;
@@ -34,6 +34,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    font-weight: bolder;
+    padding:0.5rem 0rem 0rem 0.5rem;
   }
   .Brightness{
     grid-area: bright;
@@ -65,8 +67,15 @@ body {
     filter: hue-rotate(90deg);
     animation-delay: calc(6 * var(--stagger-delay));
   }
-  .sepia{
-    grid-area: sepia;
+  .Sepia{
+    grid-area: Sepia;
+    animation-delay: calc(7 * var(--stagger-delay));
+    filter: sepia(75%);
+  }
+  .Invert{
+    grid-area: Invert;
+    animation-delay: calc(8 * var(--stagger-delay));
+    filter: invert(75%);
   }
   .main-image{
     grid-area: image;

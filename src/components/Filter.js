@@ -2,6 +2,7 @@ import React , {useState} from 'react';
 import Options from './Options';
 import Slider from './Slider';
 import "../css/Filter.css";
+import SuggFilter from './SuggFilter';
 
 const FILTER_OPTIONS = [
     {
@@ -63,10 +64,31 @@ const FILTER_OPTIONS = [
         max: 20
       },
       unit: 'px'
+    },
+    {
+      name: 'Sepia',
+      property: 'sepia',
+      value: 0,
+      range: {
+        min: 0,
+        max: 100
+      },
+      unit: '%'
+    },
+    {
+      name: 'Invert',
+      property: 'invert',
+      value: 0,
+      range: {
+        min: 0,
+        max: 100
+      },
+      unit: '%'
     }
   ]
 
 function Filter() {
+
     const [filters , setFilters] = useState(FILTER_OPTIONS)
     const [selectedFilterIndex , setSelectedFilterIndex] = useState(0)
     const selectedFilter = filters[selectedFilterIndex]
@@ -122,6 +144,7 @@ function Filter() {
             handleChange = {handleChangeSlider}
           />
         </div>
+        <SuggFilter/>
       </div>
     )
 }
