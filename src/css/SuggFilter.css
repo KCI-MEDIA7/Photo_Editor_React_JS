@@ -1,11 +1,13 @@
 @import "FileDrop.css";
 .sug-grid{
-    margin-top: 4.5rem;
+    margin:1rem;
+    margin-top: 4.5rem !important; 
 }
 .image-grid{
     display: grid;
     grid-template-columns: repeat(3 , 1fr);
     grid-gap: 3rem;
+    margin: 1rem;
 }
 
 .rec-image{

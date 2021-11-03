@@ -25,11 +25,14 @@ function FileDrop() {
             {
                 filename?<Filter/>:
             <div className="filedrop">
+                 <h2>Photo Editor App</h2>
+                 <p>Let's add some magic to moments..</p>
                 <form onSubmit={ handleSubmit}>
                     <label>Choose a file</label><br/>
                     <input type="file" id="file" onChange={(e)=>{handleChangeSubmit(e.target.files[0])}}/>                
-                    <button type="submit" class="animated-border-button" onClick={()=>{setFilename(true)}}>Submit</button>
+                    <button type="submit" className="animated-border-button" onClick={()=>{setFilename(true)}}>Submit</button>
                 </form>
+                <div>Image Size must not exceed 2MB</div>
             </div>
             }
             

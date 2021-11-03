@@ -11,6 +11,9 @@
     grid-gap: 2rem;
     place-items: center;
 }
+.image-container{
+    width: 85%;
+}
 .main-image{
     width: 85%;
     grid-area: main-image;
@@ -20,6 +23,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-top: 2rem;
 }
 button{
     margin: 1rem 2rem;

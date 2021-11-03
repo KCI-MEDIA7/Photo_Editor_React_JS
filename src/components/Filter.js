@@ -1,9 +1,10 @@
-import React , {useState} from 'react';
+import React , {useState , useEffect} from 'react';
 import Options from './Options';
 import Slider from './Slider';
 import "../css/Filter.css";
 import SuggFilter from './SuggFilter';
 import MainCanvas from './MainCanvas';
+import Loading from './Loading';
 
 const FILTER_OPTIONS = [
     {
@@ -91,11 +92,15 @@ const FILTER_OPTIONS = [
 function Filter() {
 
     const [filters , setFilters] = useState(FILTER_OPTIONS)
+    const [ loading , setLoading] = useState(true)
     const [selectedFilterIndex , setSelectedFilterIndex] = useState(0)
     const selectedFilter = filters[selectedFilterIndex]
     let fileName =JSON.parse(localStorage.getItem("image"))
 
-  
+    useEffect(() => {
+      setTimeout(() => setLoading(false), 1500)
+    }, []);
+
     function stylingMainImage(){
       const filter_combination = filters.map((option)=>{
         return (`${option.property}(${option.value}${option.unit})`)
@@ -121,10 +126,13 @@ function Filter() {
         })
       })
     }
-
+    if(loading){
+      return <Loading />
+    }
+    else{
     return (
       <div>
-        <h2 style={{textAlign:"center"}}>Beautify your images...</h2>
+        <h1 style={{textAlign:"center"}}>Beautify your images...</h1>
         <div className="grid-container">
           {/* <div className="main-image" style={stylingMainImage()} ></div> */}
           <MainCanvas fileName={fileName} addingFilter = {stylingMainImage()} reset = {resetFilter}/>
@@ -152,6 +160,7 @@ function Filter() {
         <SuggFilter/>
       </div>
     )
+  }
 }
 
 export default Filter
