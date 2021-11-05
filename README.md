@@ -23,4 +23,4 @@ Some of the awesome pages of this website
 ![Screenshot 2021-11-05 at 12-22-42 Photo editor](https://user-images.githubusercontent.com/48177682/140472705-bf169b96-4d1d-4ac8-bc72-4c3c1496e3ea.png)
 
 ## Live Solution
-(Click here)[https://nervous-tesla-3e9f84.netlify.app]
+https://nervous-tesla-3e9f84.netlify.app
