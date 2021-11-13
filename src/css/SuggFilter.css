@@ -1,7 +1,23 @@
 @import "FileDrop.css";
+h3{
+    color: #155263;
+}
+.underline-small{
+    width:200px;
+    height: 5px;
+  background: #ff6f3c;
+}
+.filter-name{
+    color:#ff9a3c;
+    font-weight: 700;
+}
 .sug-grid{
     margin:1rem;
     margin-top: 4.5rem !important; 
+    width: 90vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .image-grid{
     display: grid;
@@ -13,4 +29,8 @@
 .rec-image{
     max-width: 100%;
 }
-
+@media (max-width:500px) {
+    .image-grid{
+    grid-template-columns: 1fr;
+    }
+}

@@ -1,6 +1,6 @@
 import React , {useState , useEffect} from 'react';
 import Options from './Options';
-import Slider from './Slider';
+import SliderCustom from './SliderCustom';
 import "../css/Filter.css";
 import SuggFilter from './SuggFilter';
 import MainCanvas from './MainCanvas';
@@ -132,7 +132,10 @@ function Filter() {
     else{
     return (
       <div>
-        <h1 style={{textAlign:"center"}}>Beautify your images...</h1>
+        <div className="heading">
+          <h1 style={{textAlign:"center"}}>Beautify your images...</h1>
+          <div className="underline"></div>
+        </div>
         <div className="grid-container">
           {/* <div className="main-image" style={stylingMainImage()} ></div> */}
           <MainCanvas fileName={fileName} addingFilter = {stylingMainImage()} reset = {resetFilter}/>
@@ -150,7 +153,7 @@ function Filter() {
             })
           }
         
-          <Slider 
+          <SliderCustom 
             min = {selectedFilter.range.min} 
             max =  {selectedFilter.range.max }
             value = {selectedFilter.value}

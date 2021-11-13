@@ -1,5 +1,5 @@
 import React from 'react'
-export default function Slider({min , max , range,handleChange}) {
+export default function SliderCustom({min , max , range,handleChange}) {
     return (
         <>
             <input 

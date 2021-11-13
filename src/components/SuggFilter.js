@@ -14,11 +14,12 @@ function SuggFilter() {
             <h3>
                 Have a loot at some of that suggestions here ...
             </h3>
+            <div className="underline-small"></div>
             <div className="image-grid">
             {
                 suggested_filter.map((ele)=>{ return(
                     <div key={ele.name}>
-                        <p> {ele.name}</p>
+                        <p className="filter-name"> {ele.name}</p>
                         <img src={fileName} style = {added_filter(ele.value)} alt={ele.name}/>
                         <Canvas key={ele.name} fileName={fileName} values = {ele.value} name={ele.name}/>
                     </div>)
