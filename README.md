@@ -17,10 +17,17 @@ You will also see any lint errors in the console.
 ## ScreenShots
 Some of the awesome pages of this website
 ### Uploading page
-![Screenshot 2021-11-05 at 12-24-49 Photo editor](https://user-images.githubusercontent.com/48177682/140471870-2079dbcb-809c-4429-861f-5057a811724b.png)
+![photo_editor_upload_page](https://user-images.githubusercontent.com/48177682/141680911-9d105958-8325-42ef-bf21-ce52a712b151.jpg)
+
 
 ### Main page
-![Screenshot 2021-11-05 at 12-22-42 Photo editor](https://user-images.githubusercontent.com/48177682/140472705-bf169b96-4d1d-4ac8-bc72-4c3c1496e3ea.png)
+![photo_editor](https://user-images.githubusercontent.com/48177682/141680916-696e0702-55fb-4f73-a525-db98d70a350a.png)
 
 ## Live Solution
-https://nervous-tesla-3e9f84.netlify.app
+https://nervous-tesla-3e9f84.netlify.app 
+
+## Technologies used
+ 1. HTML5
+ 2. CSS3
+ 3. React framework - (React Hooks)
+ 4. Material UI
