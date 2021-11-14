@@ -47,13 +47,14 @@ body {
     transform: translateX(-50%);
   }
   .image{
-    background-image: url("../photo_nature.jpg") ;
-    border: 2px solid white;
+    /* background-image: url("../photo_nature.jpg") ; */
+    border: 2px solid transparent;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     font-weight: bolder;
     padding:0.5rem 0rem 0rem 0.5rem;
+    cursor: pointer;
   }
   .Brightness{
     grid-area: bright;
@@ -102,14 +103,11 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     animation-delay: calc(7 * var(--stagger-delay));
-    animation: cardEntrance 700ms ease-out;
+    animation: cardEntrance 1s ease-out;
   }
   .slider{
     grid-area:slider;
     animation-delay: calc(8 * var(--stagger-delay));
-  }
-  .image:hover{
-    border:3px solid salmon;
   }
   .image i{
     position: absolute;
@@ -121,12 +119,10 @@ body {
     from {
       opacity: 0;
       transform: scale(0.3);
-      filter: hue-rotate(180deg);
     }
     to {
       opacity: 1;
       transform: scale(1);
-      filter: hue-rotate(0deg);
     }
   }
   

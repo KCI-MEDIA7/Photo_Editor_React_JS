@@ -8,6 +8,7 @@
     font-size: 24px;
     padding: 32px;
     border-radius: 4px;
+    margin:2rem;
   
 }
 .filedrop input[type="file"]{
@@ -18,7 +19,8 @@
 }
 input[type=file]::file-selector-button {
     padding: 1rem;
-    background-color: hsl(206, 100%, 40%);
+    /* background-color: hsl(206, 100%, 40%); */
+    background-color: hsl(193, 65%, 24%);
     outline: 0;
     border: 0;
     margin: 0;
@@ -31,44 +33,10 @@ input[type=file]::file-selector-button {
 }
 
 input[type=file]::file-selector-button:hover {
-  background-color: hsl(206, 100%, 60%);
-}
-.animated-border-button {
-  background-color: var(--blue);
-  border: none;
-  color: #ffffff;
-  outline: none;
-  padding: 12px 40px 10px;
-  position: relative;
-  cursor: pointer;
+  background-color: hsl(193, 65%, 14%);
+  /* background-color: hsl(206, 100%, 60%); */
 }
 
-.animated-border-button:before,
-.animated-border-button:after {
-  border: 0 solid transparent;
-  transition: all 0.3s;
-  content: '';
-  height: 0;
-  position: absolute;
-  width: 24px;
-}
-
-.animated-border-button:before {
-  border-top: 2px solid var(--blue);
-  right: 0;
-  top: -4px;
-}
-
-.animated-border-button:after {
-  border-bottom: 2px solid var(--blue);
-  bottom: -4px;
-  left: 0;
-}
-
-.animated-border-button:hover:before,
-.animated-border-button:hover:after {
-  width: 100%;
-}
 .filedrop div{
   font-size: 17px;
   color: rgb(128, 0, 0);
@@ -79,4 +47,9 @@ input[type=file]::file-selector-button:hover {
 .filedrop p{
   font-size:15px; 
   margin-bottom:2rem;
+  color: #ff6f3c;
+  font-weight: 600;
+}
+label{
+  color: hsl(193, 65%, 24%);
 }

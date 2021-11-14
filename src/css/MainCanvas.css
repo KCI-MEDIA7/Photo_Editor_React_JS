@@ -6,8 +6,8 @@
 .main-container{
     display: grid;
     grid-template-areas: 
-    'main-image main-image'
-    'button button' ;
+    'main-image'
+    'button' ;
     grid-gap: 2rem;
     place-items: center;
 }
@@ -17,6 +17,9 @@
 .main-image{
     width: 85%;
     grid-area: main-image;
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
 }
 .button-container{
     grid-area: button;
@@ -27,13 +30,4 @@
 }
 button{
     margin: 1rem 2rem;
-}
-.animated-border-button.success{
-    background-color: var(--green);
-}
-.animated-border-button::before.success{
-  border-top: 2px solid var(--green);
-}
-.animated-border-button::after.success{
-  border-bottom: 2px solid var(--green);
 }

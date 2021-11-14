@@ -48,11 +48,12 @@ body {
   @keyframes loader {
     0% {
       transform: scaleY(0.1);
-      background:orange;
+    background:  hsl(193, 65%, 24%);
     }
     50% {
       transform: scaleY(1);
-      background: yellow;
+    background:  hsl(193, 65%, 44%);
+      
     }
     100% {
       transform: scaleY(0.1);

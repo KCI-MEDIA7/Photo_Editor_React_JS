@@ -147,6 +147,7 @@ function Filter() {
                   name={filter.name} 
                   handleChange={()=>{setSelectedFilterIndex(index)}}
                   active = {selectedFilterIndex  === index}
+                  fileName={fileName}
                   style={{backgroundImage:`url(${fileName})`}}
                   />
               )

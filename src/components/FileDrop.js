@@ -1,6 +1,8 @@
 import React from "react";
 import '../css/FileDrop.css'
 import Filter from "./Filter";
+import Button from '@mui/material/Button';
+
 
 function FileDrop() {
 
@@ -30,7 +32,7 @@ function FileDrop() {
                 <form onSubmit={ handleSubmit}>
                     <label>Choose a file</label><br/>
                     <input type="file" id="file" onChange={(e)=>{handleChangeSubmit(e.target.files[0])}}/>                
-                    <button type="submit" className="animated-border-button" onClick={()=>{setFilename(true)}}>Submit</button>
+                    <Button variant="contained" onClick={()=>{setFilename(true)}}>Submit</Button>
                 </form>
                 <div>Image Size must not exceed 2MB</div>
             </div>

@@ -1,5 +1,5 @@
 @import "FileDrop.css";
-h3{
+h2{
     color: #155263;
 }
 .underline-small{
@@ -8,8 +8,9 @@ h3{
   background: #ff6f3c;
 }
 .filter-name{
-    color:#ff9a3c;
+    color:#155263;
     font-weight: 700;
+    font-size: 1.2rem;
 }
 .sug-grid{
     margin:1rem;

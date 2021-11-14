@@ -1,11 +1,17 @@
 import React from 'react'
+import Tooltip from '@mui/material/Tooltip';
+import Zoom from '@mui/material/Zoom';
 
-function Options({name,active,handleChange ,style}) {
+function Options({name,active,handleChange ,fileName}) {
     return (
-        <div className ={ `image ${name}`} onClick={handleChange} style={style}>
-            {name}
+        <>
+        <Tooltip title={name} arrow TransitionComponent={Zoom}>
+        <div className ={ `image ${name}`} onClick={handleChange}>
+            <img src={fileName} alt={name} style={{width:"auto", height:"90%"}}/>
             {active ?<i className="fas fa-check-square"></i>:''}
         </div>
+        </Tooltip>
+        </>
     )
 } 
 

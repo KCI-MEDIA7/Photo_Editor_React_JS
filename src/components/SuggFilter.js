@@ -11,9 +11,9 @@ function SuggFilter() {
     }
     return (
         <div className="sug-grid">
-            <h3>
+            <h2>
                 Have a loot at some of that suggestions here ...
-            </h3>
+            </h2>
             <div className="underline-small"></div>
             <div className="image-grid">
             {

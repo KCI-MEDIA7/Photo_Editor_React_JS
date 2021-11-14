@@ -1,13 +1,22 @@
 import React , {useState,useEffect , useRef} from 'react'
 import canvasToImage from 'canvas-to-image';
+import Button from '@mui/material/Button';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { orange } from '@mui/material/colors';
 
+const theme = createTheme({
+    palette: {
+      primary: {
+        main: orange[900],
+      },
+    },
+  });
 function Canvas({fileName , values , name}) {
     const [canvas,setCanvas]= useState(0)
     const [img ,setImg] = useState(0)
     const canvas_ref = useRef(null)
     const image_ref = useRef(null)
 
-    
     function download(){
         canvasToImage(canvas, {name: 'myImage',type: 'jpg',quality: 1})
     }
@@ -31,11 +40,13 @@ function Canvas({fileName , values , name}) {
     },[])
 
     return (
+        <ThemeProvider theme={theme}>
         <div className = "img-container">
             <img src={fileName} ref={image_ref} style={{display:"none"}} alt={name}/>
             <canvas ref={canvas_ref} className="rec-image"></canvas><br/>
-            <button  onClick={download} className="animated-border-button">Download</button>
+            <Button variant="contained" onClick={download} sx={{mt: 4 }}>Download</Button>
         </div>
+        </ThemeProvider>
     )
 }
 
