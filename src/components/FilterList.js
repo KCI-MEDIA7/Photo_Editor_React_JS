@@ -18,6 +18,26 @@ const suggested_filter = [
     {
         name: "Old-horror",
         value: "grayscale(1) sepia(0.5) brightness(1.3) invert(0.8)"
+    },
+    {
+        name:"Early-bird",
+        value: "sepia(0.2) contrast(0.9)"
+    },
+    {
+        name:"1977",
+        value: "saturate(1.3) contrast(1.1) brightness(1.1)"
+    },
+    {
+        name:"Ink-well",
+        value:"sepia(0.3) grayscale(0.99) contrast(1.1) brightness(1.1)"
+    },
+    {
+        name:"Lofi",
+        value:"sepia(0.3) saturate(1.6) hue-rotate(-10deg) brightness(1.1)"
+    },
+    {
+        name:"Aden",
+        value:"brightness(120%) contrast(90%) hue-rotate(20deg) saturate(85%)"
     }
 ]
 export default suggested_filter

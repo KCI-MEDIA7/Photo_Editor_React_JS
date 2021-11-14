@@ -23,8 +23,9 @@ h2{
 .image-grid{
     display: grid;
     grid-template-columns: repeat(3 , 1fr);
-    grid-gap: 3rem;
+    grid-row-gap: 4rem;
     margin: 1rem;
+    grid-column-gap: 5rem;
 }
 
 .rec-image{
