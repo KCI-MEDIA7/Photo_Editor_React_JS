@@ -6,32 +6,32 @@ import Button from '@mui/material/Button';
 
 function FileDrop() {
 
-    const [filename , setFilename] = React.useState(false)
+    const [fileName , setFilename] = React.useState(false)
 
     function handleSubmit(e){
         e.preventDefault()
     }
-    function handleFile(e){
-        const content = e.target.result;
-        //console.log('file content',  content)
-        localStorage.setItem('image', JSON.stringify(content))
-        //console.log(filename)
-    }
-    function handleChangeSubmit(file){
-        let fileData = new FileReader();
-        fileData.onloadend = handleFile;
-        fileData.readAsDataURL(file);
+    
+    function handleChangeSubmit(e){
+        const { files } = e.target
+        if (files.length > 0) {
+            const url = URL.createObjectURL(files[0])
+            setFilename(url)
+            // preProcessing(fileData)
+        } else {
+            setFilename(null)
+        }
     }
     return (
         <>
             {
-                filename?<Filter/>:
+                fileName?<Filter fileName={fileName}/>:
             <div className="filedrop">
                  <h2>Photo Editor App</h2>
                  <p>Let's add some magic to moments..</p>
                 <form onSubmit={ handleSubmit}>
                     <label>Choose a file</label><br/>
-                    <input type="file" id="file" onChange={(e)=>{handleChangeSubmit(e.target.files[0])}}/>                
+                    <input type='file' accept='image/*' onChange={handleChangeSubmit} />    
                     <Button variant="contained" onClick={()=>{setFilename(true)}}>Submit</Button>
                 </form>
                 <div>Image Size must not exceed 2MB</div>

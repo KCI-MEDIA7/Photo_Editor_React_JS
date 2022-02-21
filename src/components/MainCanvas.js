@@ -5,6 +5,8 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { orange , teal } from '@mui/material/colors';
+import { drawImageOnCanvas } from './canvas.utils';
+
 
 const theme = createTheme({
     palette: {
@@ -19,12 +21,10 @@ const theme = createTheme({
 function MainCanvas({fileName , addingFilter , reset}) {
 
     const [canvas,setCanvas]= useState(0)
-    const [img ,setImg] = useState(0)
     const canvas_ref = useRef(null)
     const image_ref = useRef(null)
 
     const style = addingFilter.filter
-    //console.log(style)
 
     function download(){
         canvasToImage(canvas, {name: 'myImage',type: 'jpg',quality: 1})
@@ -37,15 +37,19 @@ function MainCanvas({fileName , addingFilter , reset}) {
         context.canvas.width = width
         context.canvas.height = height
         context.filter = `${style}`
-        //console.log({addingFilter})
         context.drawImage(img,0,0,context.canvas.width,context.canvas.height);
     }
+
+    useEffect(()=>{
+        const canvas = canvas_ref.current
+        const image = image_ref.current
+        drawImageOnCanvas(canvas , image , null)
+    } , [])
     
     useEffect(()=>{
         const canvas = canvas_ref.current
         const image = image_ref.current
         setCanvas(canvas)
-        setImg(img)
 
         draw(canvas,image);
         // eslint-disable-next-line

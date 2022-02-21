@@ -89,14 +89,13 @@ const FILTER_OPTIONS = [
     }
   ]
 
-function Filter() {
+function Filter({fileName}) {
 
     const [filters , setFilters] = useState(FILTER_OPTIONS)
     const [ loading , setLoading] = useState(true)
     const [selectedFilterIndex , setSelectedFilterIndex] = useState(0)
     const selectedFilter = filters[selectedFilterIndex]
-    let fileName =JSON.parse(localStorage.getItem("image"))
-
+    
     useEffect(() => {
       setTimeout(() => setLoading(false), 1500)
     }, []);
@@ -161,7 +160,7 @@ function Filter() {
             handleChange = {handleChangeSlider}
           />
         </div>
-        <SuggFilter/>
+        <SuggFilter fileName={fileName} />
       </div>
     )
   }
