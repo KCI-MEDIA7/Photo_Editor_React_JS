@@ -24,7 +24,7 @@ Some of the awesome pages of this website
 ![photo_editor](https://user-images.githubusercontent.com/48177682/141680916-696e0702-55fb-4f73-a525-db98d70a350a.png)
 
 ## Live Solution
-https://nervous-tesla-3e9f84.netlify.app 
+
 
 ## Technologies used
  1. HTML5
