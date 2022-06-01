@@ -27,14 +27,14 @@ function FileDrop() {
             {
                 fileName?<Filter fileName={fileName}/>:
             <div className="filedrop">
-                 <h2>Photo Editor App</h2>
+                 <h2>ARA Photo Editor</h2>
                  <p>Let's add some magic to moments..</p>
                 <form onSubmit={ handleSubmit}>
                     <label>Choose a file</label><br/>
                     <input type='file' accept='image/*' onChange={handleChangeSubmit} />    
                     <Button variant="contained" onClick={()=>{setFilename(true)}}>Submit</Button>
                 </form>
-                <div>Image Size must not exceed 2MB</div>
+                <div>Note: Image Size must not exceed 2MB</div>
             </div>
             }
             
